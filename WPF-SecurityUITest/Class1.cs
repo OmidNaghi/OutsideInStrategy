@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WPF_SecurityUI
+namespace WPF_SecurityUITest
 {
     public class Class1
     {

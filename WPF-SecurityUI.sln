@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF-SecurityUI", "WPF-SecurityUI\WPF-SecurityUI.csproj", "{AFE92A10-F727-4BED-9CAB-E9B9F983BC2A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF-SecurityUI", "WPF-SecurityUI\WPF-SecurityUI.csproj", "{03C9BA93-45DA-497F-8F4C-29E1F4F69FEF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF-SecurityUITest", "WPF-SecurityUITest\WPF-SecurityUITest.csproj", "{A2E5CCD6-19CB-449A-ACF1-1BB8110CF25A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{AFE92A10-F727-4BED-9CAB-E9B9F983BC2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AFE92A10-F727-4BED-9CAB-E9B9F983BC2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AFE92A10-F727-4BED-9CAB-E9B9F983BC2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AFE92A10-F727-4BED-9CAB-E9B9F983BC2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03C9BA93-45DA-497F-8F4C-29E1F4F69FEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03C9BA93-45DA-497F-8F4C-29E1F4F69FEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03C9BA93-45DA-497F-8F4C-29E1F4F69FEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03C9BA93-45DA-497F-8F4C-29E1F4F69FEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2E5CCD6-19CB-449A-ACF1-1BB8110CF25A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2E5CCD6-19CB-449A-ACF1-1BB8110CF25A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2E5CCD6-19CB-449A-ACF1-1BB8110CF25A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2E5CCD6-19CB-449A-ACF1-1BB8110CF25A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
