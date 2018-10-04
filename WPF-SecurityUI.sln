@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF-SecurityUI", "WPF-Secur
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF-SecurityUITest", "WPF-SecurityUITest\WPF-SecurityUITest.csproj", "{A2E5CCD6-19CB-449A-ACF1-1BB8110CF25A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "Entities\Entities.csproj", "{C5851531-E7A5-46C2-A1CA-442D2C09A466}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{A2E5CCD6-19CB-449A-ACF1-1BB8110CF25A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A2E5CCD6-19CB-449A-ACF1-1BB8110CF25A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A2E5CCD6-19CB-449A-ACF1-1BB8110CF25A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5851531-E7A5-46C2-A1CA-442D2C09A466}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5851531-E7A5-46C2-A1CA-442D2C09A466}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5851531-E7A5-46C2-A1CA-442D2C09A466}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5851531-E7A5-46C2-A1CA-442D2C09A466}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
