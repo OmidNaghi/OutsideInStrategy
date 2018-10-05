@@ -58,14 +58,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModel\GenderViewModelTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Analyzer Include="..\packages\xunit.analyzers.0.10.0\analyzers\dotnet\cs\xunit.analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Entities\Entities.csproj">
+      <Project>{C5851531-E7A5-46C2-A1CA-442D2C09A466}</Project>
+      <Name>Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WPF-SecurityUI\WPF-SecurityUI.csproj">
+      <Project>{03C9BA93-45DA-497F-8F4C-29E1F4F69FEF}</Project>
+      <Name>WPF-SecurityUI</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
