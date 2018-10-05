@@ -1,4 +1,5 @@
 ﻿using Entities;
+using Moq;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -14,66 +15,48 @@ namespace WPF_SecurityUITest.ViewModel
 {
     public class GenderViewModelTest
     {
+        private GenderViewModel _viewModel;
+
+        public GenderViewModelTest()
+        {
+            var GenderDataProviderMock = new Mock<IDataProvider<Gender>>();
+            GenderDataProviderMock.Setup(dp => dp.ReadAll())
+                .Returns(new List<Gender>
+                 {
+                    new Gender { Id = 1, Title = "Male", DateIn = DateTime.Now, Dateupdate = DateTime.Now, MemberId = 1, Timestamp = null },
+                    new Gender { Id = 2, Title = "Female", DateIn = DateTime.Now, Dateupdate = DateTime.Now, MemberId = 1, Timestamp = null }
+                 }
+                );
+            _viewModel = new GenderViewModel(GenderDataProviderMock.Object);
+        }
         [Fact]
         public void ShouldLoadGenders()
         {
-            var viewModel = new GenderViewModel(new GenderDataProviderMock());
+            _viewModel.Load();
 
-            viewModel.Load();
+            Assert.Equal(2, _viewModel.Genders.Count);
+        }
 
-            Assert.Equal(2, viewModel.Genders.Count);
+        [Fact]
+        public void DuplicateGenderLoad()
+        {
+            _viewModel.Load();
+            _viewModel.Load();
+            Assert.Equal(2, _viewModel.Genders.Count);
+            
         }
 
         [Fact]
         public void LoadSpecificGender()
         {
-            var viewModel = new GenderViewModel(new GenderDataProviderMock());
-
-            var Gender = viewModel.Genders.Single(x => x.Id==1);
+            _viewModel.Load();
+            var Gender = _viewModel.Genders.SingleOrDefault(x => x.Id == 1);
             Assert.NotNull(Gender);
+            Assert.Equal("Male", Gender.Title);
 
-
-            Assert.Equal(2, viewModel.Genders.Count);
-        }
-    }
-
-    public class GenderDataProviderMock : IDataProvider<Gender>
-    {
-        public bool Create(Gender entity)
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool Delete(Gender entity)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Dispose()
-        {
-            throw new NotImplementedException();
-        }
-
-        public IEnumerable<Gender> ReadAll()
-        {
-            yield return new Gender { Id = 1, Title = "Male", DateIn = DateTime.Now, Dateupdate = DateTime.Now, MemberId = 1, Timestamp = null };
-            yield return new Gender { Id = 2, Title = "Female", DateIn = DateTime.Now, Dateupdate = DateTime.Now, MemberId = 1, Timestamp = null };
-            
-        }
-
-        public IEnumerable<Gender> ReadAll(int Id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public IEnumerable<Gender> ReadAll(Expression<Func<Gender, bool>> predicate)
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool Update(Gender entity)
-        {
-            throw new NotImplementedException();
+            Gender = _viewModel.Genders.SingleOrDefault(x => x.Id == 2);
+            Assert.NotNull(Gender);
+            Assert.Equal("Female", Gender.Title);
         }
     }
 }
